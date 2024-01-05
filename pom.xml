@@ -21,6 +21,11 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Embed-Dependency>
+                            commons-exec;
+                            scope=compile|runtime;
+                            inline=false
+                        </Embed-Dependency>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Export-Package>python.to.java.*;version=${project.version}</Export-Package>
