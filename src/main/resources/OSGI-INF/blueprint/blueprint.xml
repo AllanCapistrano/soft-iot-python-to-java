@@ -5,8 +5,22 @@
     xsi:schemaLocation="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
                         http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
 
-    <bean id="myBean" class="python.to.java.models.Service" />
+    <service id="IKMeans"
+        ref="kMeans"
+        interface="python.to.java.services.IKMeans" />
 
-    <service ref="myBean" interface="python.to.java.services.IService" />
+    <bean id="kMeans"
+        class="python.to.java.models.pythonExecutions.KMeans"
+        init-method="start"
+        destroy-method="stop">
+        <property name="filePath" value="${kmeansScriptPath}" />
+    </bean>
 
+    <cm:property-placeholder
+        persistent-id="br.uefs.larsid.soft_iot.python_to_node"
+        update-strategy="reload">
+        <cm:default-properties>
+            <cm:property name="kmeansScriptPath" value="/opt/karaf/etc/python_scripts/kmeans.py" />
+        </cm:default-properties>
+    </cm:property-placeholder>
 </blueprint>
