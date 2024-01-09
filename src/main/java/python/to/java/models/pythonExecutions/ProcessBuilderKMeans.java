@@ -12,7 +12,9 @@ import java.util.stream.Collectors;
 import python.to.java.services.IKMeans;
 
 /**
- *
+ * Classe responsável por executar o algoritmo KMeans através do Process 
+ * Builder.
+ * 
  * @author Allan Capistrano
  * @version 1.0.0
  */

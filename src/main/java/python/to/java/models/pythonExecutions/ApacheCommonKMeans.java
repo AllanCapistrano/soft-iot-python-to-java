@@ -10,7 +10,9 @@ import python.to.java.models.ApacheCommonExecutor;
 import python.to.java.services.IKMeans;
 
 /**
- *
+ * Classe responsável por executar o algoritmo KMeans através do Apache Common 
+ * Exec.
+ * 
  * @author Allan Capistrano
  * @version 1.0.0
  */
