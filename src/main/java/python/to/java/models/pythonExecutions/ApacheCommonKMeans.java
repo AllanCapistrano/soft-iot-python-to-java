@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import python.to.java.models.Executor;
+import python.to.java.models.ApacheCommonExecutor;
 import python.to.java.services.IKMeans;
 
 /**
@@ -14,13 +14,13 @@ import python.to.java.services.IKMeans;
  * @author Allan Capistrano
  * @version 1.0.0
  */
-public class KMeans extends Executor implements IKMeans {
+public class ApacheCommonKMeans extends ApacheCommonExecutor implements IKMeans {
 
   private String filePath;
 
-  private static final Logger logger = Logger.getLogger(KMeans.class.getName());
+  private static final Logger logger = Logger.getLogger(ApacheCommonKMeans.class.getName());
 
-  public KMeans() {}
+  public ApacheCommonKMeans() {}
 
   /**
    * Executa o que foi definido na função quando o bundle for inicializado.

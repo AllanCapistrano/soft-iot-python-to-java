@@ -11,7 +11,7 @@ import org.apache.commons.exec.PumpStreamHandler;
  * @author Allan Capistrano
  * @version 1.0.0
  */
-public abstract class Executor {
+public abstract class ApacheCommonExecutor {
 
   private DefaultExecutor executor;
   private ByteArrayOutputStream outputStream;
