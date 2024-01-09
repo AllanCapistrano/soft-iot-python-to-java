@@ -10,7 +10,7 @@
         interface="python.to.java.services.IKMeans" />
 
     <bean id="kMeans"
-        class="python.to.java.models.pythonExecutions.KMeans"
+        class="python.to.java.models.pythonExecutions.ProcessBuilderKMeans"
         init-method="start"
         destroy-method="stop">
         <property name="filePath" value="${kmeansScriptPath}" />
