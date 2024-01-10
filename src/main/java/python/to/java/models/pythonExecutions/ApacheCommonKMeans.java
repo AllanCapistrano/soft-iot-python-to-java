@@ -10,17 +10,21 @@ import python.to.java.models.ApacheCommonExecutor;
 import python.to.java.services.IKMeans;
 
 /**
- * Classe responsável por executar o algoritmo KMeans através do Apache Common 
+ * Classe responsável por executar o algoritmo KMeans através do Apache Common
  * Exec.
- * 
+ *
  * @author Allan Capistrano
  * @version 1.0.0
  */
-public class ApacheCommonKMeans extends ApacheCommonExecutor implements IKMeans {
+public class ApacheCommonKMeans
+  extends ApacheCommonExecutor
+  implements IKMeans {
 
   private String filePath;
 
-  private static final Logger logger = Logger.getLogger(ApacheCommonKMeans.class.getName());
+  private static final Logger logger = Logger.getLogger(
+    ApacheCommonKMeans.class.getName()
+  );
 
   public ApacheCommonKMeans() {}
 
@@ -29,22 +33,6 @@ public class ApacheCommonKMeans extends ApacheCommonExecutor implements IKMeans 
    */
   public void start() {
     this.init();
-
-    // TODO: Remover linhas abaixo.
-    List<Float> nodesCredibility = new ArrayList<>();
-
-    nodesCredibility.add((float) 0.51720076);
-    nodesCredibility.add((float) 0.8750231);
-    nodesCredibility.add((float) 0.59633187);
-    nodesCredibility.add((float) 0.98066132);
-    nodesCredibility.add((float) 0.70062445);
-    nodesCredibility.add((float) 0.54810414);
-    nodesCredibility.add((float) 0.74329332);
-    nodesCredibility.add((float) 0.01303828);
-
-    List<Float> temp = this.execute(nodesCredibility);
-
-    logger.info(temp.toString());
   }
 
   /**

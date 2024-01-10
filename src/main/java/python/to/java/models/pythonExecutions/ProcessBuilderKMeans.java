@@ -12,9 +12,9 @@ import java.util.stream.Collectors;
 import python.to.java.services.IKMeans;
 
 /**
- * Classe responsável por executar o algoritmo KMeans através do Process 
+ * Classe responsável por executar o algoritmo KMeans através do Process
  * Builder.
- * 
+ *
  * @author Allan Capistrano
  * @version 1.0.0
  */
@@ -27,27 +27,6 @@ public class ProcessBuilderKMeans implements IKMeans {
   );
 
   public ProcessBuilderKMeans() {}
-
-  // TODO: Remover após os testes
-  public void start() {
-    List<Float> nodesCredibility = new ArrayList<>();
-
-    nodesCredibility.add((float) 0.51720076);
-    nodesCredibility.add((float) 0.8750231);
-    nodesCredibility.add((float) 0.59633187);
-    nodesCredibility.add((float) 0.98066132);
-    nodesCredibility.add((float) 0.70062445);
-    nodesCredibility.add((float) 0.54810414);
-    nodesCredibility.add((float) 0.74329332);
-    nodesCredibility.add((float) 0.01303828);
-
-    List<Float> temp = this.execute(nodesCredibility);
-
-    logger.info(temp.toString());
-  }
-
-  // TODO: Remover após os testes
-  public void stop() {}
 
   /**
    * Executa o algoritmo KMeans em uma lista contendo a credibilidade dos nós,
