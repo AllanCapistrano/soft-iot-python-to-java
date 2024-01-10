@@ -54,15 +54,15 @@ public class ProcessBuilderKMeans implements IKMeans {
    * e retorna uma lista contendo somente as credibilidades que compõem o grupo
    * com as maiores credibilidades.
    *
-   * @param nodesCredibilityString String - Lista com as credibilidades dos nós.
+   * @param nodesCredibility List<Float> - Lista com as credibilidades dos nós.
    * @return List<Float>
    */
   @Override
-  public List<Float> execute(List<Float> nodesCredibilityString) {
+  public List<Float> execute(List<Float> nodesCredibility) {
     ProcessBuilder processBuilder = new ProcessBuilder(
       "python3",
       this.filePath,
-      nodesCredibilityString.toString()
+      nodesCredibility.toString()
     );
     processBuilder.redirectErrorStream(true);
 
