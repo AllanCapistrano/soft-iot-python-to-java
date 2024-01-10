@@ -41,7 +41,7 @@ public class ProcessBuilderKMeans implements IKMeans {
     nodesCredibility.add((float) 0.74329332);
     nodesCredibility.add((float) 0.01303828);
 
-    List<Float> temp = this.execute(nodesCredibility.toString());
+    List<Float> temp = this.execute(nodesCredibility);
 
     logger.info(temp.toString());
   }
@@ -58,11 +58,11 @@ public class ProcessBuilderKMeans implements IKMeans {
    * @return List<Float>
    */
   @Override
-  public List<Float> execute(String nodesCredibilityString) {
+  public List<Float> execute(List<Float> nodesCredibilityString) {
     ProcessBuilder processBuilder = new ProcessBuilder(
       "python3",
       this.filePath,
-      nodesCredibilityString
+      nodesCredibilityString.toString()
     );
     processBuilder.redirectErrorStream(true);
 
