@@ -17,3 +17,6 @@ As configurações são específicas para cada execução, dessa forma, quando i
 | Propriedade | Descrição | Valor Padrão |
 | ----------- | --------- | ------------ |
 | kmeansScriptPath | Caminho onde o script Python do KMeans está localizado. | `/opt/karaf/etc/python_scripts/kmeans.py` |
+
+## Licença
+[GPL-3.0 License](./LICENSE)
