@@ -2,7 +2,7 @@
 
 O `soft-iot-python-to-java` é o *bundle* responsável responsável por permitir a execução de scripts em Python na plataforma SOFT-IoT.
 
-É possível executar código usando:
+É possível executar código Python usando:
 - [Apache Commons Exec](https://commons.apache.org/proper/commons-exec/index.html);
 - [Process Builder](https://docs.oracle.com/javase/8/docs/api/java/lang/ProcessBuilder.html).
 
